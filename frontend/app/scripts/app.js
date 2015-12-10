@@ -30,6 +30,15 @@ function NodebotAppConfig($httpProvider, $stateProvider, $urlRouterProvider) {
           controller: 'PatientsListCtrl'
         }
       }
+    })
+    .state('app.new', {
+      url: '/new',
+      views: {
+        'viewContent': {
+          templateUrl: 'templates/components/patients/new.html',
+          controller: 'PatientNewCtrl'
+        }
+      }
     });
 
   // redirects to default route for undefined routes
