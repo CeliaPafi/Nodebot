@@ -12,15 +12,13 @@ angular.module('nodebot')
     $scope.patientList = [];
     // getPatients();
 
-    // $ionicView.enter
+    $scope.$on('$ionicView.enter', function() {
+      getPatients();
+    });
 
     function getPatients() {
       patientSvc.getAll().then(function(getAllPatients) {
         $scope.patientList = getAllPatients;
       });
     }
-
-    $scope.$on('$ionicView.enter', function() {
-      getPatients();
-    });
   });

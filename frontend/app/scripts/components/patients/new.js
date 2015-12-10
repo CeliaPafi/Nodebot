@@ -8,6 +8,7 @@
  */
 angular.module('nodebot')
   .controller('PatientNewCtrl', function($scope, $timeout, $ionicHistory, events, patientSvc) {
+    $scope.state = 'step-1'
     $scope.patient = {
       name: {
         first: '',
@@ -22,4 +23,8 @@ angular.module('nodebot')
       patientSvc.save($scope.patient);
       $ionicHistory.goBack();
     };
+
+    $scope.setState = function(state) {
+      $scope.state = state;
+    }
   });
