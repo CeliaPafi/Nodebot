@@ -1,2 +1,3 @@
-# Nodebot
-Sistema experto para diagnostico de asma utilizando un nodebot
+# Medical Nodebot
+
+Nodebot which uses an expert system for the Asthma diagnostic
