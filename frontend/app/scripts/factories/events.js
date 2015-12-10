@@ -1,5 +1,5 @@
 'use strict';
-angular.module('lubertapp')
+angular.module('nodebot')
   .factory('events', eventsFactory)
   .value('eventsList', getEvents());
 

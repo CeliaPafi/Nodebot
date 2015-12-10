@@ -9,7 +9,7 @@
  * just inject lodash as _
  */
 
-angular.module('lubertapp')
+angular.module('nodebot')
   .factory('_', function($window) {
     return $window._;
   });

@@ -2,18 +2,18 @@
 
 /**
  * @ngdoc overview
- * @name Lubertapp
+ * @name NodebotApp
  * @description
  * # Initializes main application and routing
  *
  * Main module of the application.
  */
 
-angular.module('lubertapp', ['ionic', 'ngCordova', 'ngResource', 'ngMessages', 'ngAnimate', 'leaflet-directive', 'nvd3'])
-  .config(LubertAppConfig)
-  .run(LubertAppRun);
+angular.module('nodebot', ['ionic', 'ngCordova', 'ngResource', 'ngMessages', 'ngAnimate', 'leaflet-directive', 'nvd3'])
+  .config(NodebotAppConfig)
+  .run(NodebotAppRun);
 
-function LubertAppConfig($httpProvider, $stateProvider, $urlRouterProvider) {
+function NodebotAppConfig($httpProvider, $stateProvider, $urlRouterProvider) {
   // Application routing
   $stateProvider
     .state('app', {
@@ -27,7 +27,7 @@ function LubertAppConfig($httpProvider, $stateProvider, $urlRouterProvider) {
       views: {
         'viewContent': {
           templateUrl: 'templates/components/list/list.html',
-          controller: 'ListCtrl'
+          controller: 'PatientsListCtrl'
         }
       }
     });
@@ -37,7 +37,7 @@ function LubertAppConfig($httpProvider, $stateProvider, $urlRouterProvider) {
 
 }
 
-function LubertAppRun($rootScope, $timeout, $state, $ionicPlatform, $ionicConfig, $cordovaSplashscreen, $cordovaNetwork, $cordovaToast) {
+function NodebotAppRun($rootScope, $timeout, $state, $ionicPlatform, $ionicConfig, $cordovaSplashscreen, $cordovaNetwork, $cordovaToast) {
   // Ionic Stuff
   $rootScope.$on('$ionicView.loaded', function() {
     ionic.Platform.ready(function() {
@@ -45,8 +45,6 @@ function LubertAppRun($rootScope, $timeout, $state, $ionicPlatform, $ionicConfig
         navigator.splashscreen.hide();
       }
     });
-
-
   });
 
   $ionicPlatform.ready(function() {

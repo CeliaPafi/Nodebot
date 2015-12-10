@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lubertapp')
+angular.module('nodebot')
   .factory('artistsSvc', artistsSvc);
 
 

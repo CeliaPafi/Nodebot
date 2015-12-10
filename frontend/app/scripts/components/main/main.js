@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc function
- * @name lubertapp.components.main
+ * @name nodebot.components.main
  * @description
  * # Main Controller
  */
-angular.module('lubertapp')
+angular.module('nodebot')
   .controller('MainCtrl', function($scope) {
 
   });
