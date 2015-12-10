@@ -1,0 +1,13 @@
+
+
+*node_modules/
+frontend/platforms/
+frontend/plugins/
+frontend/hooks/
+*bower_components/
+
+.tmp/
+frontend/www/
+frontend/.sass-cache
+*.DS_Store
+*.log
