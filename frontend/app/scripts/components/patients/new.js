@@ -7,7 +7,7 @@
  * # Main Controller
  */
 angular.module('nodebot')
-  .controller('PatientNewCtrl', function($scope, $timeout, $ionicModal, $ionicScrollDelegate, events, patientSvc) {
+  .controller('PatientNewCtrl', function($scope, $timeout, $ionicHistory, events, patientSvc) {
     $scope.patient = {
       name: {
         first: '',
@@ -20,5 +20,6 @@ angular.module('nodebot')
 
     $scope.savePatient = function() {
       patientSvc.save($scope.patient);
+      $ionicHistory.goBack();
     };
   });

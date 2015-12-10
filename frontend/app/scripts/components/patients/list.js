@@ -9,4 +9,9 @@
 angular.module('nodebot')
   .controller('PatientsListCtrl', function($scope, $timeout, $ionicModal, $ionicScrollDelegate, events, patientSvc) {
     console.log('patients list');
+    $scope.patientList = [];
+
+    patientSvc.getAll().then(function(getAllPatients) {
+      $scope.patientList = getAllPatients;
+    })
   });

@@ -4,11 +4,12 @@ ion-view
      a.button.button-clear(ui-sref="app.new") Nuevo
      
   ion-content
-    ion-list
+    ion-list(ng-if="patientList.length > 0")
       ion-item(ng-repeat="patient in patientList") 
         b {{ $index + 1}}.&nbsp;
         i.icon.ion-male.male-color(ng-if=" patient.gender === 'M' ")
         i.icon.ion-female.female-color(ng-if=" patient.gender === 'F' ")
         span &nbsp;{{ patient.name }} 
         span &nbsp;{{ patient.age }} años
+    div(ng-if="patientList.length == 0") No existen pacientes registrados
       
