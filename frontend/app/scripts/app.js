@@ -22,12 +22,12 @@ function LubertAppConfig($httpProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/components/main/main.html',
       controller: 'MainCtrl'
     })
-    .state('app.results', {
-      url: '/results',
+    .state('app.list', {
+      url: '/list',
       views: {
         'viewContent': {
-          templateUrl: 'templates/components/results/results.html',
-          controller: 'ResultsCtrl'
+          templateUrl: 'templates/components/list/list.html',
+          controller: 'ListCtrl'
         }
       }
     });
