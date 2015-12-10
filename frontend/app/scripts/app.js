@@ -9,11 +9,11 @@
  * Main module of the application.
  */
 
-angular.module('nodebot', ['ionic', 'ngCordova', 'ngResource', 'ngMessages', 'ngAnimate', 'leaflet-directive', 'nvd3'])
+angular.module('nodebot', ['ionic', 'ngCordova', 'ngResource', 'ngMessages', 'ngAnimate', 'leaflet-directive', 'nvd3', 'LocalStorageModule'])
   .config(NodebotAppConfig)
   .run(NodebotAppRun);
 
-function NodebotAppConfig($httpProvider, $stateProvider, $urlRouterProvider) {
+function NodebotAppConfig($httpProvider, $stateProvider, $urlRouterProvider, localStorageServiceProvider) {
   // Application routing
   $stateProvider
     .state('app', {
@@ -44,6 +44,7 @@ function NodebotAppConfig($httpProvider, $stateProvider, $urlRouterProvider) {
   // redirects to default route for undefined routes
   $urlRouterProvider.otherwise('/list');
 
+  localStorageServiceProvider.setPrefix('nodebot');
 }
 
 function NodebotAppRun($rootScope, $timeout, $state, $ionicPlatform, $ionicConfig, $cordovaSplashscreen, $cordovaNetwork, $cordovaToast) {

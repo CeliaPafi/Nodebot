@@ -1,4 +1,24 @@
 ion-view
   ion-nav-title Nuevo Paciente
+  ion-nav-buttons(side="right")
+     a.button.button-clear(ng-click="savePatient()") Guardar
+     
   ion-content
-    div FORMULARIO
+    form(name="newPatientForm")
+      .list
+        label.item.item-input.item-floating-label
+          span.input-label Nombres
+          input(type="text" placeholder="Nombre" ng-model="patient.name.first" required)
+        label.item.item-input.item-floating-label
+          span.input-label Apellido paterno
+          input(type="text" placeholder="Apellido paterno" ng-model="patient.name.father")
+        label.item.item-input.item-floating-label
+          span.input-label Apellido materno
+          input(type="text" placeholder="Apellido materno" ng-model="patient.name.mother")
+        label.item.item-input.item-floating-label
+          span.input-label Fecha de nacimiento
+          input(type="text" placeholder="Fecha de nacimiento (DD/MM/AAAA)" ng-model="patient.birthday")
+        label.item.item-divider
+          span Género
+        ion-radio(ng-model="patient.gender" ng-value="'M'") Masculino
+        ion-radio(ng-model="patient.gender" ng-value="'F'") Femenino

@@ -8,5 +8,17 @@
  */
 angular.module('nodebot')
   .controller('PatientNewCtrl', function($scope, $timeout, $ionicModal, $ionicScrollDelegate, events, patientSvc) {
-    console.log('new patient');
+    $scope.patient = {
+      name: {
+        first: '',
+        mother: '',
+        father: ''
+      },
+      birthday: '',
+      genre: ''
+    };
+
+    $scope.savePatient = function() {
+      patientSvc.save($scope.patient);
+    };
   });
