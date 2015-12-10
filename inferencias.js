@@ -1,7 +1,7 @@
-module.exports = new Inferenecias();
-function Inferenecias() {}
+module.exports = new Inferencias();
+function Inferencias() {}
 
-Inferenecias.prototype.getPuntajeCuestionario = function(sintomas) {
+Inferencias.prototype.getPuntajeCuestionario = function(sintomas) {
     var puntaje = 0 ;
 
     // Inicio de problemas respiratorios anterior a los 20
@@ -117,7 +117,7 @@ Inferenecias.prototype.getPuntajeCuestionario = function(sintomas) {
 // 14 en contra
 
 
-Inferenecias.prototype.getPuntajeExamenes = function(sintomas) {
+Inferencias.prototype.getPuntajeExamenes = function(sintomas) {
   var puntaje = 0;
 
   // Temperatura corporal normal
