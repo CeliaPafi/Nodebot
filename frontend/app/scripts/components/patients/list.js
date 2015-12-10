@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc function
- * @name nodebot.components.results
+ * @name nodebot.components.patients_list
  * @description
  * # Main Controller
  */
