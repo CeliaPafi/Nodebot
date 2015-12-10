@@ -1,0 +1,27 @@
+H0: Edad de inicio con problemas respiratorios es menor a 20 años.
+H1: Tos con frecuencia diaria.
+H2: Tos con frecuencia esporádica.
+H3: La tos se intensifica a primeras horas de la mañana.
+H4: La tos se intensifica por las noches.
+H5: El tiempo  de instauración de la tos tiene más de 30 días.
+H6: Expectoración abundante.
+H7: Expectoración irritativa.
+H8: Esputo perlado.
+H9: Presencia de dolor torácico. Valores de la lista ---- Ausente,Leve,Moderado
+H10: Sensación de opresión en el pecho. Boolean
+H11: Presencia de disnea o fatiga.
+H12: Limitación de actividades. Valores de la lista ----- Leve, Moderado, Grave
+H13: Alteración de conciencia.
+H14: Presencia de factores agravantes.
+H15: Presencia silbilancia.
+H16: Presencia de sudores fríos.
+H16: Registra temperatura corporal normal.
+H17: Registra temperatura corporal alta.
+H18: Frecuencia de pulso normal.
+H19: Frecuencia de pulso alto.
+H20: Saturación de oxígeno en la sangre normal.
+H21: Saturación de oxígeno en la sangre por debajo de lo normal.
+H22: El cociente FEV1/ CVF es normal.
+H23: CVF está disminuido.
+H24: El paciente es fumador.
+H25: El paciente presenta antecedentes familiares de primer grado.
