@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('nodebot')
-  .factory('artistsSvc', artistsSvc);
+  .factory('patientSvc', patientSvc);
 
 
-function artistsSvc($q, artistsDS) {
+function patientSvc($q) {
   function getAll() {
     var deferred = $q.defer();
-    deferred.resolve(artistsDS.getAll());
+    deferred.resolve();
     return deferred.promise;
   }
 

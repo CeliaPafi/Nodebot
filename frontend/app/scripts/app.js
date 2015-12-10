@@ -26,14 +26,14 @@ function NodebotAppConfig($httpProvider, $stateProvider, $urlRouterProvider) {
       url: '/list',
       views: {
         'viewContent': {
-          templateUrl: 'templates/components/list/list.html',
+          templateUrl: 'templates/components/patients/list.html',
           controller: 'PatientsListCtrl'
         }
       }
     });
 
   // redirects to default route for undefined routes
-  $urlRouterProvider.otherwise('/results');
+  $urlRouterProvider.otherwise('/list');
 
 }
 

@@ -10,7 +10,7 @@ var args = require('yargs')
   .argv;
 
 var options = {
-  appName: 'lubertapp',
+  appName: 'nodebot',
 
   src: 'app',
   assets: 'app/assets',
