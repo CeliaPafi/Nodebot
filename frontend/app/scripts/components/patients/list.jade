@@ -1,36 +1,10 @@
-ion-header-bar.bar-positive(align-title="center")
-  a.title Lubert POC
-  button.button.button-icon.icon(ng-click="showFilter()") 
-    i.icon.ion-funnel
-
-ion-content
-  div(ng-if="state === 'list'")
+ion-view
+  ion-content
     ion-list
-      ion-item.item-divider ({{ artists.length }}) artist
-      ion-item(ng-repeat="artist in artistsList") 
+      ion-item(ng-repeat="patient in patientList") 
         b {{ $index + 1}}.&nbsp;
-        i.icon.ion-male.male-color(ng-if=" artist.gender === 'M' ")
-        i.icon.ion-female.female-color(ng-if=" artist.gender === 'F' ")
-        span &nbsp;{{ artist.age }} years
-        span &nbsp;{{ artist.rate }} rate
-    
-    ion-infinite-scroll(ng-if="!noMoreItemsAvailable" on-infinite="loadMore()")
+        i.icon.ion-male.male-color(ng-if=" patient.gender === 'M' ")
+        i.icon.ion-female.female-color(ng-if=" patient.gender === 'F' ")
+        span &nbsp;{{ patient.name }} 
+        span &nbsp;{{ patient.age }} años
       
-  div(ng-if="state === 'graphs'")
-    nvd3(options="graphs.options" data="graphs.data")
-
-.height-100.map-container(ng-show="state === 'map'")
-  lt-map
-
-.tabs.tabs-icon-top.tabs-striped.tabs-color-positive
-  a.tab-item(ng-click="setState('list')" ng-class="{ active: state === 'list'}")
-    i.icon.ion-ios-list
-    | List
-  
-  a.tab-item(ng-click="setState('map')" ng-class="{ active: state === 'map'}")
-    i.icon.ion-ios-location
-    | Map
-    
-  a.tab-item(ng-click="setState('graphs')" ng-class="{ active: state === 'graphs'}")
-    i.icon.ion-ios-pie
-    | Graphs
