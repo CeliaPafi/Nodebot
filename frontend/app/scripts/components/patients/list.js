@@ -7,7 +7,7 @@
  * # Main Controller
  */
 angular.module('lubertapp')
-  .controller('ResultsCtrl', function($scope, $timeout, $ionicModal, $ionicScrollDelegate, events, artistsSvc) {
+  .controller('ListCtrl', function($scope, $timeout, $ionicModal, $ionicScrollDelegate, events, artistsSvc) {
     // console.log(artistsSvc.getAll());
     var artistsListLimit = 20;
     var ratingRange = {
